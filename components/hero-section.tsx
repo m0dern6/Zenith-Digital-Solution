@@ -1,98 +1,91 @@
 "use client"
 
+import { motion } from "framer-motion"
+import { ArrowRight, Code, Globe, Zap } from "lucide-react"
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Sparkles, Play } from "lucide-react"
-import { useEffect, useState } from "react"
 
 export function HeroSection() {
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
   return (
-    <section className="relative min-h-screen overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-100 via-white to-purple-100" />
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+      {/* Background Elements */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse delay-1000" />
+        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
+      </div>
 
-      {/* Floating gradient orbs */}
-      <div className="absolute left-[10%] top-[20%] h-72 w-72 animate-float rounded-full bg-gradient-to-br from-blue-400 to-cyan-300 opacity-30 blur-3xl" />
-      <div className="absolute right-[15%] top-[30%] h-96 w-96 animate-float rounded-full bg-gradient-to-br from-purple-400 to-pink-300 opacity-30 blur-3xl animation-delay-2000" />
-      <div className="absolute bottom-[20%] left-[20%] h-80 w-80 animate-float rounded-full bg-gradient-to-br from-indigo-400 to-blue-300 opacity-30 blur-3xl animation-delay-4000" />
-
-      {/* Subtle grid pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:64px_64px]" />
-
-      <div className="container relative mx-auto flex min-h-screen flex-col items-center justify-center px-6 py-32 text-center">
-        <div
-          className={`mb-8 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 px-6 py-2.5 text-sm font-medium text-white shadow-lg shadow-blue-500/25 backdrop-blur-xl transition-all duration-700 ${mounted ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}
+      <div className="container relative z-10 px-4 mx-auto text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="inline-flex items-center px-3 py-1 rounded-full border border-primary/20 bg-primary/10 text-primary text-sm font-medium mb-8"
         >
-          <Sparkles className="h-4 w-4 animate-pulse" />
-          <span>Transforming Businesses Through Technology</span>
-        </div>
+          <span className="flex h-2 w-2 rounded-full bg-primary mr-2 animate-ping" />
+          Innovating the Future
+        </motion.div>
 
-        <h1
-          className={`mb-6 max-w-5xl text-balance text-5xl font-bold leading-[1.1] tracking-tight text-gray-900 transition-all duration-700 delay-100 md:text-6xl lg:text-7xl xl:text-8xl ${mounted ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="text-5xl md:text-7xl font-bold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-b from-foreground to-foreground/50"
         >
-          Cloud Solutions for the{" "}
-          <span className="relative inline-block">
-            <span className="animate-gradient bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent bg-[length:200%_auto]">
-              Digital Age
-            </span>
-          </span>
-        </h1>
+          Digital Solutions for <br />
+          <span className="text-primary">Modern Businesses</span>
+        </motion.h1>
 
-        <p
-          className={`mb-12 max-w-2xl text-pretty text-lg leading-relaxed text-gray-600 transition-all duration-700 delay-200 md:text-xl lg:text-2xl ${mounted ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="text-xl text-muted-foreground max-w-2xl mx-auto mb-10"
         >
-          Empowering enterprises with cutting-edge cloud infrastructure, robust cybersecurity, and seamless digital
-          transformation solutions.
-        </p>
+          We craft stunning websites, powerful applications, and scalable digital strategies to help your business thrive in the digital age.
+        </motion.p>
 
-        <div
-          className={`flex flex-col items-center gap-4 transition-all duration-700 delay-300 sm:flex-row ${mounted ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+          className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          <Button
-            size="lg"
-            className="group relative h-12 overflow-hidden bg-gradient-to-r from-blue-600 to-purple-600 px-8 text-base font-semibold text-white shadow-xl shadow-blue-500/30 transition-all hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/40"
-          >
-            <span className="relative z-10 flex items-center">
-              Start Your Journey
+          <Button asChild size="lg" className="h-12 px-8 text-lg group">
+            <Link href="/contact">
+              Start Your Project
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </span>
+            </Link>
           </Button>
-          <Button
-            size="lg"
-            variant="outline"
-            className="group h-12 border-2 border-gray-300 bg-white/80 px-8 text-base font-semibold text-gray-900 backdrop-blur-xl transition-all hover:scale-105 hover:border-blue-400 hover:bg-white"
-          >
-            <Play className="mr-2 h-4 w-4" />
-            Watch Demo
+          <Button asChild size="lg" variant="outline" className="h-12 px-8 text-lg">
+            <Link href="/portfolio">
+              View Portfolio
+            </Link>
           </Button>
-        </div>
+        </motion.div>
 
-        <div
-          className={`mt-32 grid w-full max-w-5xl gap-8 transition-all duration-700 delay-500 sm:grid-cols-2 lg:grid-cols-4 ${mounted ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}
+        {/* Floating Icons */}
+        <motion.div
+          animate={{ y: [0, -20, 0] }}
+          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute top-1/4 left-10 md:left-20 text-primary/20 hidden md:block"
         >
-          {[
-            { value: "500+", label: "Clients Worldwide", gradient: "from-blue-500 to-cyan-500" },
-            { value: "99.9%", label: "Uptime SLA", gradient: "from-purple-500 to-pink-500" },
-            { value: "24/7", label: "Support Available", gradient: "from-indigo-500 to-blue-500" },
-            { value: "15+", label: "Years Experience", gradient: "from-violet-500 to-purple-500" },
-          ].map((stat, index) => (
-            <div
-              key={index}
-              className="group relative flex flex-col items-center gap-3 rounded-2xl border-2 border-gray-200 bg-white/80 p-6 shadow-lg backdrop-blur-sm transition-all hover:scale-105 hover:border-blue-300 hover:shadow-xl"
-            >
-              <div
-                className={`bg-gradient-to-br ${stat.gradient} bg-clip-text text-5xl font-bold text-transparent lg:text-6xl`}
-              >
-                {stat.value}
-              </div>
-              <div className="text-sm font-medium text-gray-600">{stat.label}</div>
-            </div>
-          ))}
-        </div>
+          <Code size={64} />
+        </motion.div>
+        <motion.div
+          animate={{ y: [0, 20, 0] }}
+          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+          className="absolute bottom-1/4 right-10 md:right-20 text-purple-500/20 hidden md:block"
+        >
+          <Globe size={64} />
+        </motion.div>
+        <motion.div
+          animate={{ y: [0, -15, 0] }}
+          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+          className="absolute top-1/3 right-1/4 text-blue-400/20 hidden md:block"
+        >
+          <Zap size={48} />
+        </motion.div>
       </div>
     </section>
   )

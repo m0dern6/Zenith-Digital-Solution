@@ -1,102 +1,117 @@
 import Link from "next/link"
+import { Facebook, Twitter, Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react"
 
 export function Footer() {
   return (
-    <footer className="border-t border-gray-200 bg-white">
-      <div className="container mx-auto px-6 py-12">
-        <div className="grid gap-8 md:grid-cols-4">
-          {/* Brand */}
-          <div className="md:col-span-1">
-            <Link
-              href="/"
-              className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-xl font-semibold tracking-tight text-transparent"
-            >
-              Zenith Digital
-            </Link>
-            <p className="mt-4 text-sm text-gray-600">
-              Empowering businesses through innovative IT solutions and digital transformation.
+    <footer className="bg-background border-t border-border/40 pt-16 pb-8">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+          <div className="space-y-4">
+            <h3 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-400">
+              Zenith Digital Solution
+            </h3>
+            <p className="text-muted-foreground">
+              Elevating businesses through innovative digital solutions. We build the future of the web.
             </p>
+            <div className="flex space-x-4">
+              <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <Facebook className="h-5 w-5" />
+              </Link>
+              <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <Twitter className="h-5 w-5" />
+              </Link>
+              <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <Instagram className="h-5 w-5" />
+              </Link>
+              <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <Linkedin className="h-5 w-5" />
+              </Link>
+            </div>
           </div>
 
-          {/* Solutions */}
           <div>
-            <h3 className="mb-4 text-sm font-semibold text-gray-900">Solutions</h3>
-            <ul className="space-y-3 text-sm text-gray-600">
+            <h4 className="font-semibold text-lg mb-4">Services</h4>
+            <ul className="space-y-2">
               <li>
-                <Link href="#" className="transition-colors hover:text-gray-900">
-                  Cloud Infrastructure
+                <Link href="/services" className="text-muted-foreground hover:text-primary transition-colors">
+                  Web Development
                 </Link>
               </li>
               <li>
-                <Link href="#" className="transition-colors hover:text-gray-900">
-                  Cybersecurity
+                <Link href="/services" className="text-muted-foreground hover:text-primary transition-colors">
+                  Mobile Apps
                 </Link>
               </li>
               <li>
-                <Link href="#" className="transition-colors hover:text-gray-900">
-                  Data Analytics
+                <Link href="/services" className="text-muted-foreground hover:text-primary transition-colors">
+                  UI/UX Design
                 </Link>
               </li>
               <li>
-                <Link href="#" className="transition-colors hover:text-gray-900">
-                  AI Solutions
+                <Link href="/services" className="text-muted-foreground hover:text-primary transition-colors">
+                  Cloud Solutions
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Company */}
           <div>
-            <h3 className="mb-4 text-sm font-semibold text-gray-900">Company</h3>
-            <ul className="space-y-3 text-sm text-gray-600">
+            <h4 className="font-semibold text-lg mb-4">Company</h4>
+            <ul className="space-y-2">
               <li>
-                <Link href="#" className="transition-colors hover:text-gray-900">
+                <Link href="/about" className="text-muted-foreground hover:text-primary transition-colors">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="#" className="transition-colors hover:text-gray-900">
+                <Link href="/portfolio" className="text-muted-foreground hover:text-primary transition-colors">
+                  Portfolio
+                </Link>
+              </li>
+              <li>
+                <Link href="/careers" className="text-muted-foreground hover:text-primary transition-colors">
                   Careers
                 </Link>
               </li>
               <li>
-                <Link href="#" className="transition-colors hover:text-gray-900">
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="transition-colors hover:text-gray-900">
+                <Link href="/contact" className="text-muted-foreground hover:text-primary transition-colors">
                   Contact
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Legal */}
           <div>
-            <h3 className="mb-4 text-sm font-semibold text-gray-900">Legal</h3>
-            <ul className="space-y-3 text-sm text-gray-600">
-              <li>
-                <Link href="#" className="transition-colors hover:text-gray-900">
-                  Privacy Policy
-                </Link>
+            <h4 className="font-semibold text-lg mb-4">Contact Us</h4>
+            <ul className="space-y-4">
+              <li className="flex items-start space-x-3 text-muted-foreground">
+                <MapPin className="h-5 w-5 mt-0.5 shrink-0" />
+                <span>123 Innovation Drive, Tech City, TC 90210</span>
               </li>
-              <li>
-                <Link href="#" className="transition-colors hover:text-gray-900">
-                  Terms of Service
-                </Link>
+              <li className="flex items-center space-x-3 text-muted-foreground">
+                <Phone className="h-5 w-5 shrink-0" />
+                <span>+1 (555) 123-4567</span>
               </li>
-              <li>
-                <Link href="#" className="transition-colors hover:text-gray-900">
-                  Cookie Policy
-                </Link>
+              <li className="flex items-center space-x-3 text-muted-foreground">
+                <Mail className="h-5 w-5 shrink-0" />
+                <span>info@zenithdigital.com</span>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="mt-12 border-t border-gray-200 pt-8 text-center text-sm text-gray-600">
-          <p>&copy; {new Date().getFullYear()} Zenith Digital Solution. All rights reserved.</p>
+        <div className="border-t border-border/40 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-sm text-muted-foreground">
+            © {new Date().getFullYear()} Zenith Digital Solution. All rights reserved.
+          </p>
+          <div className="flex space-x-6 text-sm text-muted-foreground">
+            <Link href="/legal/privacy" className="hover:text-primary transition-colors">
+              Privacy Policy
+            </Link>
+            <Link href="/legal/terms" className="hover:text-primary transition-colors">
+              Terms of Service
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

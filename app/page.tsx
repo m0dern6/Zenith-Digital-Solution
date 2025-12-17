@@ -1,21 +1,19 @@
-import { Header } from "@/components/header"
+import { Navbar } from "@/components/navbar"
 import { HeroSection } from "@/components/hero-section"
-import { FeaturesSection } from "@/components/features-section"
+import { ServicesSection } from "@/components/services-section"
+import { ProjectsSection } from "@/components/projects-section"
+import { TestimonialsSection } from "@/components/testimonials-section"
 import { CTASection } from "@/components/cta-section"
 import { Footer } from "@/components/footer"
-import type { Metadata } from "next"
 
-export const metadata: Metadata = {
-  title: "Zenith Digital Solution - Transform Your Business with Digital Excellence",
-  description: "Leading digital transformation partner offering cloud infrastructure, custom development, data analytics, cybersecurity, and mobile solutions. Empowering businesses with innovative technology solutions.",
-}
-
-export default function HomePage() {
+export default function Home() {
   return (
-    <main className="min-h-screen">
-      <Header />
+    <main className="min-h-screen bg-background">
+      <Navbar />
       <HeroSection />
-      <FeaturesSection />
+      <ServicesSection />
+      <ProjectsSection />
+      <TestimonialsSection />
       <CTASection />
       <Footer />
     </main>
