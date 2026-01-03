@@ -34,7 +34,7 @@ const services = [
     title: "Cloud Infrastructure",
     description: "Scalable and secure cloud solutions using AWS, Azure, or Google Cloud.",
     icon: Cloud,
-    href: "/services/cloud-infrastructure",
+    href: "https://www.draegan.com/content/images/size/w1200/2021/08/YT-Cloud-Computing-2.png",
   },
   {
     title: "Cybersecurity",
@@ -70,19 +70,30 @@ export function ServicesSection() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <Link href={service.href} className="block h-full">
-                <Card className="h-full hover:shadow-lg transition-shadow duration-300 border-primary/10 hover:border-primary/30 bg-card/50 backdrop-blur-sm">
-                  <CardHeader>
-                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 text-primary">
+              <Card className="group relative h-[300px] overflow-hidden border-0 hover:shadow-xl transition-all duration-300">
+                {/* Background Image */}
+                <div
+                  className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                  style={{ backgroundImage: `url(${service.href})` }}
+                />
+
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-black/60 transition-opacity duration-300 group-hover:bg-black/70" />
+
+                {/* Content */}
+                <div className="relative h-full flex flex-col justify-end p-6 z-10 text-white">
+                  <div className="mb-auto pt-4">
+                    <div className="w-12 h-12 rounded-lg bg-white/20 backdrop-blur-sm flex items-center justify-center mb-4 text-white">
                       <service.icon className="h-6 w-6" />
                     </div>
-                    <CardTitle>{service.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription>{service.description}</CardDescription>
-                  </CardContent>
-                </Card>
-              </Link>
+                  </div>
+
+                  <CardTitle className="text-2xl font-bold mb-2 text-white">{service.title}</CardTitle>
+                  <CardDescription className="text-gray-200 text-sm font-medium">
+                    {service.description}
+                  </CardDescription>
+                </div>
+              </Card>
             </motion.div>
           ))}
         </div>

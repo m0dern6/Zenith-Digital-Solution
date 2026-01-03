@@ -14,6 +14,7 @@ const services = [
     description: "We build high-performance, SEO-friendly websites using the latest technologies like Next.js, React, and Node.js. From simple landing pages to complex web applications, we deliver solutions that drive growth.",
     icon: Code,
     features: ["Custom Web Applications", "E-commerce Solutions", "CMS Development", "API Integration"],
+    image: "https://w0.peakpx.com/wallpaper/59/567/HD-wallpaper-web-designing-training-in-pune-web-design-web-design-training-in-pune-website-design-training-web-development-course-in-pune-web-development-training-in-india-website-design-training-in-india.jpg"
   },
   {
     title: "Mobile App Development",
@@ -21,6 +22,7 @@ const services = [
     description: "Create seamless mobile experiences for iOS and Android. Our cross-platform solutions ensure your app reaches the widest audience without compromising on performance.",
     icon: Smartphone,
     features: ["iOS & Android Apps", "React Native Development", "App Store Optimization", "Maintenance & Support"],
+    image: "https://media.istockphoto.com/id/1174690086/photo/software-developer-freelancer-working-at-home.jpg?s=612x612&w=0&k=20&c=loFqul06ggwtkwqSmzZnYfA72Vk7nFQOvDSzAN6YbtQ="
   },
   {
     title: "AI & Machine Learning",
@@ -28,6 +30,7 @@ const services = [
     description: "Leverage the power of Artificial Intelligence to automate processes, gain insights, and enhance customer experiences. We build intelligent systems tailored to your specific needs.",
     icon: Brain,
     features: ["Chatbots & Virtual Assistants", "Predictive Analytics", "Natural Language Processing", "Computer Vision"],
+    image: "https://static.vecteezy.com/system/resources/thumbnails/024/820/398/small/robot-man-artificial-intelligence-with-a-beautiful-face-look-at-logo-ai-on-hand-in-blue-circuit-bokeh-blur-virtual-cyberspace-futuristic-technology-vector.jpg"
   },
   {
     title: "Cloud Solutions",
@@ -35,6 +38,7 @@ const services = [
     description: "Scale your business with secure and reliable cloud infrastructure. We help you migrate, manage, and optimize your cloud environment for maximum efficiency.",
     icon: Cloud,
     features: ["Cloud Migration", "AWS/Azure/GCP Management", "DevOps Automation", "Serverless Architecture"],
+    image: "https://www.draegan.com/content/images/size/w1200/2021/08/YT-Cloud-Computing-2.png"
   },
 ]
 
@@ -98,18 +102,31 @@ export default function ServicesPage() {
                     </Button>
                   </Link>
                 </div>
-                <div className="flex-1 relative h-[400px] w-full rounded-3xl overflow-hidden bg-secondary/50 border border-border/50">
-                  {/* Placeholder for service image */}
-                  <div className="absolute inset-0 flex items-center justify-center text-muted-foreground/50">
-                    <service.icon className="h-32 w-32 opacity-20" />
-                  </div>
-                  <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent" />
+                <div className="flex-1 relative h-[400px] w-full rounded-3xl overflow-hidden bg-secondary/50 border border-border/50 group">
+                  {service.image ? (
+                    <>
+                      <img
+                        src={service.image}
+                        alt={service.title}
+                        className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-primary/10 group-hover:bg-primary/5 transition-colors duration-300" />
+                    </>
+                  ) : (
+                    <>
+                      <div className="absolute inset-0 flex items-center justify-center text-muted-foreground/50">
+                        <service.icon className="h-32 w-32 opacity-20" />
+                      </div>
+                      <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent" />
+                    </>
+                  )}
                 </div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
+
 
       <Footer />
     </main>
