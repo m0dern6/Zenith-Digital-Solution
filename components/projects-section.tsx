@@ -15,29 +15,18 @@ import { Badge } from "@/components/ui/badge"
 
 const projects = [
   {
-    title: "E-Commerce Platform",
-    category: "Web Development",
-    image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80",
-    description: "A full-featured online store with payment gateway integration.",
+    title: "Futsal Pay: Book & Play Court",
+    category: "App Development",
+    image: "https://play-lh.googleusercontent.com/_CDJQqdw-CM3jf8mhHz3CS7jZM0tRLtX2wN_z5f2-iQWVy-sUnXP6gmxkRS1witwYul6L2qcyVXSiYgPiOwGXzw=w5120-h2880-rw",
+    description: "The ultimate sports management platform to discover nearby courts, split payments instantly, and join local matches.",
   },
   {
-    title: "FinTech Dashboard",
-    category: "UI/UX Design",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
-    description: "Real-time financial data visualization for a banking client.",
+    title: "TripGenie: AI Travel Planner",
+    category: "App Development",
+    image: "https://play-lh.googleusercontent.com/LUq1kqMH2syezCbUsoP7iSrPQ-OBFwXtTMAgw3xWz6wr7cziYwXn3wGzfQY4hVhhORPTZpK5J7aT3oudS2aIzg=w1052-h592-rw",
+    description: "An intelligent travel companion powered by Gemini AI that transforms your wanderlust into reality by generating personalized itineraries, tracking real-time expenses, and providing offline access to curated destination guides for an effortless journey.",
   },
-  {
-    title: "Health & Fitness App",
-    category: "Mobile App",
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80",
-    description: "Cross-platform mobile application for tracking workouts and diet.",
-  },
-  {
-    title: "AI Chatbot Interface",
-    category: "AI Solutions",
-    image: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=800&q=80",
-    description: "Conversational AI interface for customer support automation.",
-  },
+
 ]
 
 export function ProjectsSection() {

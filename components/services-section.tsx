@@ -16,19 +16,19 @@ const services = [
     title: "Web Development",
     description: "Custom websites built with modern technologies like Next.js and React.",
     icon: Code,
-    href: "/services/web-development",
+    href: "https://w0.peakpx.com/wallpaper/59/567/HD-wallpaper-web-designing-training-in-pune-web-design-web-design-training-in-pune-website-design-training-web-development-course-in-pune-web-development-training-in-india-website-design-training-in-india.jpg",
   },
   {
     title: "Mobile Apps",
     description: "Native and cross-platform mobile applications for iOS and Android.",
     icon: Smartphone,
-    href: "/services/mobile-apps",
+    href: "https://media.istockphoto.com/id/1174690086/photo/software-developer-freelancer-working-at-home.jpg?s=612x612&w=0&k=20&c=loFqul06ggwtkwqSmzZnYfA72Vk7nFQOvDSzAN6YbtQ=",
   },
   {
     title: "AI Solutions",
     description: "Intelligent systems and chatbots to automate your business processes.",
     icon: Brain,
-    href: "/services/ai-solutions",
+    href: "https://static.vecteezy.com/system/resources/thumbnails/024/820/398/small/robot-man-artificial-intelligence-with-a-beautiful-face-look-at-logo-ai-on-hand-in-blue-circuit-bokeh-blur-virtual-cyberspace-futuristic-technology-vector.jpg",
   },
   {
     title: "Cloud Infrastructure",
@@ -40,13 +40,13 @@ const services = [
     title: "Cybersecurity",
     description: "Protecting your digital assets with advanced security measures.",
     icon: Shield,
-    href: "/services/cybersecurity",
+    href: "https://t3.ftcdn.net/jpg/05/64/97/12/360_F_564971239_YvaLsmD5d5AJUHpbn8KXktJOGFUynIDv.jpg",
   },
   {
     title: "Data Analytics",
     description: "Actionable insights derived from your business data.",
     icon: BarChart,
-    href: "/services/data-analytics",
+    href: "https://media.istockphoto.com/id/1488294044/photo/businessman-works-on-laptop-showing-business-analytics-dashboard-with-charts-metrics-and-kpi.jpg?s=612x612&w=0&k=20&c=AcxzQAe1LY4lGp0C6EQ6reI7ZkFC2ftS09yw_3BVkpk=",
   },
 ]
 

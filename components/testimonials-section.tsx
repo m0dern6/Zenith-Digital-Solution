@@ -6,34 +6,22 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
 const testimonials = [
   {
-    name: "Sarah Johnson",
+    name: "Ashish Poudyal",
     role: "CEO, TechFlow",
     content: "Zenith Digital transformed our online presence. Their attention to detail and innovative approach is unmatched.",
     avatar: "SJ",
   },
   {
-    name: "Michael Chen",
+    name: "Raj Basnet",
     role: "CTO, Innovate Inc",
     content: "The team delivered a complex web application ahead of schedule and beyond our expectations.",
     avatar: "MC",
   },
   {
-    name: "Emily Davis",
-    role: "Marketing Director, GrowthCo",
+    name: "Aman Acharya",
+    role: "Marketing Director",
     content: "Working with Zenith was a pleasure. They truly understand modern design and user experience.",
     avatar: "ED",
-  },
-  {
-    name: "David Wilson",
-    role: "Founder, StartupX",
-    content: "Exceptional quality and professional service. Highly recommended for any serious business.",
-    avatar: "DW",
-  },
-  {
-    name: "Jessica Brown",
-    role: "Product Manager, Enterprise Solutions",
-    content: "They turned our vision into reality with precision and creativity. A fantastic partner.",
-    avatar: "JB",
   },
 ]
 

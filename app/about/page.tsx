@@ -4,32 +4,24 @@ import { motion } from "framer-motion"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { Card, CardContent } from "@/components/ui/card"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+//import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
 const team = [
   {
-    name: "Alex Morgan",
-    role: "CEO & Founder",
-    bio: "Visionary leader with 15+ years of experience in digital transformation.",
-    avatar: "AM",
+    name: "Ankit Poudyal",
+    role: "CEO & Co-founder",
+    bio: "A visionary leader with over 8 years of experience in scaling startups, our CEO specializes in turning disruptive ideas into market-leading products by aligning high-level business strategy with a passion for user-centric innovation.",
   },
   {
-    name: "Sarah Chen",
-    role: "Creative Director",
-    bio: "Award-winning designer passionate about creating intuitive user experiences.",
-    avatar: "SC",
+    name: "Nabin Adhikari",
+    role: "CTO & Co-founder",
+    bio: "With 5+ years of expertise in full-stack architecture and AI integration, our CTO leads the engineering team in building secure, high-traffic platforms, ensuring our technical stack remains at the cutting edge of industry standards.",
   },
   {
-    name: "James Wilson",
-    role: "Lead Developer",
-    bio: "Full-stack expert specializing in scalable architecture and performance.",
-    avatar: "JW",
-  },
-  {
-    name: "Elena Rodriguez",
-    role: "Head of Strategy",
-    bio: "Strategic thinker helping brands navigate the complex digital landscape.",
-    avatar: "ER",
+    name: "Sajit Gurung",
+    role: "CMO & Co-founder",
+    bio: "A seasoned growth strategist with 6 years of experience in the digital landscape, our CMO excels at building global brand identities and executing data-driven campaigns that consistently drive high user retention and market expansion.",
+
   },
 ]
 
@@ -37,19 +29,19 @@ export default function AboutPage() {
   return (
     <main className="min-h-screen bg-background">
       <Navbar />
-      
+
       {/* Hero Section */}
       <section className="pt-32 pb-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-primary/5 -z-10" />
         <div className="container mx-auto px-4 text-center">
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-6xl font-bold mb-6"
           >
             About <span className="text-primary">Zenith</span>
           </motion.h1>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
@@ -84,9 +76,11 @@ export default function AboutPage() {
               className="relative h-[400px] rounded-2xl overflow-hidden bg-secondary/50"
             >
               {/* Placeholder for office image */}
-              <div className="absolute inset-0 flex items-center justify-center text-muted-foreground">
-                Office Image Placeholder
-              </div>
+              <img
+                src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8b2ZmaWNlfGVufDB8fDB8fHww"
+                alt="Office Space"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
             </motion.div>
           </div>
         </div>
@@ -107,10 +101,7 @@ export default function AboutPage() {
               >
                 <Card className="text-center h-full hover:shadow-lg transition-shadow border-primary/10">
                   <CardContent className="pt-6">
-                    <Avatar className="w-24 h-24 mx-auto mb-4">
-                      <AvatarImage src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${member.name}`} />
-                      <AvatarFallback>{member.avatar}</AvatarFallback>
-                    </Avatar>
+
                     <h3 className="text-xl font-semibold mb-1">{member.name}</h3>
                     <p className="text-primary text-sm mb-4">{member.role}</p>
                     <p className="text-muted-foreground text-sm">{member.bio}</p>

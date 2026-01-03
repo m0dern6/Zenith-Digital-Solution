@@ -163,7 +163,7 @@ export default function ContactPage() {
                 <p className="text-muted-foreground mb-8">
                   Fill out the form or reach out to us directly. We're always ready to discuss your next big idea.
                 </p>
-                
+
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary shrink-0">
@@ -172,8 +172,8 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-semibold mb-1">Our Office</h3>
                       <p className="text-muted-foreground">
-                        123 Innovation Drive, Tech City<br />
-                        TC 90210, United States
+                        Mustang Chowk, Pokhara<br />
+                        Nepal
                       </p>
                     </div>
                   </div>
@@ -184,8 +184,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-semibold mb-1">Phone</h3>
-                      <p className="text-muted-foreground">+1 (555) 123-4567</p>
-                      <p className="text-muted-foreground">+1 (555) 987-6543</p>
+                      <p className="text-muted-foreground">+977 9840214223</p>
                     </div>
                   </div>
 
@@ -195,8 +194,8 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-semibold mb-1">Email</h3>
-                      <p className="text-muted-foreground">hello@zenithdigital.com</p>
-                      <p className="text-muted-foreground">support@zenithdigital.com</p>
+                      <p className="text-muted-foreground">info@zenithdigitalsolution.com</p>
+                      <p className="text-muted-foreground">support@zenithdigitalsolution.com</p>
                     </div>
                   </div>
 
